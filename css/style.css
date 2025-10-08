@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Inter', sans-serif;
+    color: #234470;
+}
+
+/* HEADER */
+/**************************************************/
+header {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 0 20px;
+}
+
+.container__titulo a {
+    text-decoration: none;
+    color: #234470;
+}
+
+.container__narvar {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    font-weight: bold;
+
+}
+
+.container__narvar a {
+    text-decoration: none;
+    color: #234470;
+}
+
+#btnCotiza {
+    background-color: #2563EB;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.main__index {
+    background-color: #dde3ec;;
+    height: 60vh;
+    display: flex;              
+    justify-content: center;    
+    align-items: center; 
+}
+
+.container__presentacion {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    padding: 50px 0 50px;
+}
+
+.container__presentacion h1 {
+    font-size: 45px;
+    font-weight: bold;
+}
+.container__presentacion p {
+    font-size: 20px;
+    text-align: center;
+}
+
+#btnObtenCotizacion {
+    background-color: #2563EB;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.servicios__container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.servicios__container p {
+    margin-top: 12px;
+}
+
+footer {
+    position: fixed;
+    text-align: center;
+    bottom: 50px;
+    width: 100%; 
+}
+
+.servicio__titulo {
+    font-weight: bold;
+}
+
+.servicio__icono {
+    width: 80px;       
+    height: auto;     
+}
+
+/* SERVICIOS */
+/*********************************************************/
+.container__main {
+    background-color: #dde3ec;
+    display: grid;
+    /* grid-template-rows: repeat(2, 1fr);
+    min-height: calc(100vh - 100px); */
+    grid-template-rows: auto auto;
+    align-items: start;
+    padding-bottom: 80px; 
+}
+
+.container__cards__servicios {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 130px;
+    justify-items: center; 
+    align-items: center;
+}
+
+.container__titulo_footer  {
+    font-size: 10px;
+    color: #adc3e7;
+    text-decoration: none;
+}
+
+.servicio__cards {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(109, 106, 106, 0.1);
+}
+
+.container__footer {
+    position: fixed;
+    text-align: center;
+    bottom: 0;
+    width: 100%; 
+}
+
+
+/* COTIZADOR */
+/*********************************************************/
+.container__cotizador__presentacion {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    background-color: #dde3ec;
+    padding: 100px;
+}
+.container__cotizador__monto {
+    display: flex;
+    margin-top: 30px;
+    background-color: white;
+    display: grid;
+    justify-content: center;
+}
+
+.container__cotizador__presentacion h1 {
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom:  15px;
+}
+
+.container__cotizador__presentacion p {
+    font-size: 20px;
+}
+
+#formCotizador select,
+#formCotizador input {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+#formCotizador label {
+    font-weight: bold;
+}
+
+.container__cotizacion,
+.container_drop,
+.container_monto,
+.container_btnCalcular{
+    display: flex;
+    flex-direction: column;
+}
+
+#formCotizador label {
+    margin-top: 10px;
+}
+#btnCalcular {
+    background-color: #2563EB;
+    color: white;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1251px) {
+
+    .container__main {
+        padding: 30px 20px;
+        grid-template-rows: auto auto;
+    }
+
+    .container__presentacion h1 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .container__presentacion p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .container__cards__servicios {
+        grid-template-columns: repeat(2, 1fr); 
+        column-gap: 20px;
+        row-gap: 20px;
+    }
+
+    .servicio__cards {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .servicio__icono {
+        width: 70px;
+    }
+
+    .container__narvar {
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .container__footer h1 {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .main__cotizador {
+        padding: 30px 20px;
+    }
+
+    #formCotizador {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    #formCotizador select,
+    #formCotizador input {
+        width: 100%;
+        padding: 14px;
+        font-size: 16px;
+    }
+
+    .container__cotizador__presentacion h1 {
+        font-size: 32px;
+    }
+
+    .container__cotizador__presentacion p {
+        font-size: 16px;
+    }
+
+    .container__narvar {
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+}
