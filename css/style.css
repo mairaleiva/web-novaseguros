@@ -85,10 +85,10 @@ header {
 }
 
 footer {
-    position: fixed;
+    
     text-align: center;
-    bottom: 50px;
-    width: 100%; 
+  width: 100%;
+  padding: 20px 0;
 }
 
 .servicio__titulo {
