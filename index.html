@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nova Seguros</title>
-    <link rel="stylesheet" href="./css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
+    
     <header>
         <div class="container__titulo">
             <h1>
@@ -15,16 +17,28 @@
             </h1>
         </div>
         <nav class="container__narvar"> 
-            <a href="index.html">Inicio</a>
-            <a href="servicios.html" class="container__narvar__servicios">Servicios</a>
-            <button type="button" class="btn btn-outline-primary" onclick="window.location.href='cotiza.html'">Cotiza</button>
+            <ul>
+                <li>
+                    <a href="index.html">Inicio</a>
+                </li>
+                <li>
+                    <a href="./sitios/servicios.html" class="container__narvar__servicios">Servicios</a>
+                </li>
+                <li>
+                    <button type="button" class="btn__cotiza" onclick="window.location.href='./sitios/cotiza.html'">Cotiza</button>
+                </li>
+            </ul>
         </nav>
     </header>
     <main class="main__index">
+        <video autoplay muted loop class="video__fondo">
+                <source src="./videos/video.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
         <section class="container__presentacion">
-            <h1>Protege lo que más importa</h1>
+            <h2>Protege lo que más importa</h2>
             <p>Ofrecemos las mejores opciones parar asegurar tus<br>bienes y tu tranquilidad</p>
-            <button type="button" class="btn btn-primary" onclick="window.location.href='cotiza.html'">OBTÉN UNA COTIZACIÓN</button>
+            <button type="button" onclick="window.location.href='./sitios/cotiza.html'">OBTÉN UNA COTIZACIÓN</button>
         </section> 
     </main>
     <footer>

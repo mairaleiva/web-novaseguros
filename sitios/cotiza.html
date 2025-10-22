@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotiza</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="container__body__servicios">
+    <div class="hero__section">
+        <header class="header__cotiza">
+            <div class="container__titulo__cotiza">
+                <h1>
+                    <a href="../index.html">NOVA SEGUROS</a>
+                </h1>
+            </div>
+            <nav class="container__narvar__cotiza"> 
+                <ul>
+                    <li>
+                        <a href="../index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="servicios.html" class="container__narvar__servicios">Servicios</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main__cotizador">
+            <div class="container__cotizador">
+                <section class="container__cotizador__presentacion">
+                    <h2>Cotizador</h2>
+                    <p>Obten una cotización rápida<br> siguiendo unos sencillos pasos</p>
+                </section> 
+
+                <section class="container__cotizador__monto">
+                    <form id="formCotizador">
+                        <div class="container_drop">
+                            <label for="opciones">Tipo de Seguro:</label>
+                            <select id="opciones" name="opciones">
+                            <option value="">Seleccionar...</option>
+                            <option value="auto">Auto</option>
+                            <option value="hogar">Hogar</option>
+                            <option value="vida">Vida</option>
+                            <option value="negocio">Negocio</option>
+                            <option value="viaje">Viajes</option>
+                            </select>
+                        </div>
+
+                        <dic class="container__cotizacion">
+                            <div class="container_monto">
+                                <label for="monto">Monto a asegurar:</label>
+                                <input type="number" id="monto" name="monto" min="0" step="1000" class="monto-numerico">
+                            </div>
+
+                            <div class="container_btnCalcular">
+                                <button type="submit" id="btnCalcular">Calcular</button>
+                            </div>
+                        </dic>
+                    </form>
+                </section>
+            </div>
+        </main>
+    </div>
+    <footer class="container__footer">
+        <div>
+            <h3>
+                <a class="container__titulo_footer" href="index.html">@ NOVA SEGUROS</a>
+            </h3>
+        </div>
+    </footer>
+</body>
+</html>

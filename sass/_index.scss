@@ -1,0 +1,324 @@
+// Variables
+// ===============================
+$color-azul-oscuro: #234470;
+$color-primario: #2563EB;
+$color-primario-oscuro: #1E40AF;
+$color-bg: #dde3ec;
+$blanco: #fff;
+// Mixins
+// ===============================
+@mixin absolute-fill {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+}
+
+// Reset 
+// ===============================
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    color: $color-azul-oscuro;
+}
+
+a { text-decoration: none; }
+
+// main 
+// ===============================
+.main__index  {
+    position: relative;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: $blanco;
+
+    .video__fondo {
+        @include absolute-fill;
+        object-fit: cover;
+        z-index: 1;
+    }
+
+    .overlay {
+        @include absolute-fill;
+        background: rgba(35, 68, 112, 0.6);
+        
+        z-index: 2;
+    }
+
+    .container__presentacion {
+    position: relative;
+    z-index: 3;
+    color: $blanco;
+
+    h2 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        color: $blanco;
+    }
+
+    button {
+        background-color: $color-primario-oscuro;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 10px;
+        font-size: 1rem;
+        color: $blanco;
+        transition: 0.3s;
+
+    &:hover {
+        background-color: $color-primario-oscuro;
+        transform: scale(1.05);
+    }
+    }
+}
+}
+
+// ===============================
+// Header
+// ===============================
+header {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 0 20px;
+}
+
+.container__titulo {
+    a {
+        text-decoration: none;
+        color: $color-azul-oscuro;
+    }
+}
+
+.container__narvar {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    font-weight: bold;
+
+    a {
+        text-decoration: none;
+        color: $color-azul-oscuro;
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        gap: 25px;
+        align-items: center;
+    }
+}
+
+.btn__cotiza {
+    background-color: $color-primario-oscuro;
+    color: $blanco;
+    padding: 0 10px;
+    border-radius: 10px;
+    border: 2px solid $color-primario-oscuro;
+
+    &:hover { border-color: $blanco; }
+}
+
+.container__presentacion {
+    h1 {
+        font-size: 45px;
+        font-weight: bold;
+        }
+    }
+
+
+footer {
+    position: relative;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.servicios__container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+        p { margin-top: 12px; }
+}
+.servicio__titulo { font-weight: bold; }
+
+.servicio__icono {
+    width: 80px;
+    height: auto;
+}
+
+
+
+//servicios
+.container__titulo__servicios a,
+.container__narvar__servicios a,
+.container__titulo__cotiza a,
+.container__narvar__cotiza a
+{
+    color: $blanco;
+}
+
+.container__body__servicios{
+    ul {
+        list-style: none;
+        display: flex;
+        gap: 25px;
+        align-items: center;
+    }
+}
+.container__body__servicios {
+    background: linear-gradient(135deg, $color-primario-oscuro 0%, $color-primario 50%, $color-bg 100%);
+    color: $color-azul-oscuro;
+    height: 100vh; 
+}
+
+.container__main__servicios {
+    .container__presentacion
+    {
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container__presentacion h2
+    {
+        font-size: 80px;
+        color: $blanco;
+    }
+
+    .container__presentacion p
+    {
+        font-size: 35px;
+        color: $blanco;
+    }
+
+    .container__cards__servicios {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        justify-items: center;
+        align-items: center;
+        margin-top: 50px;
+
+    .servicio__cards {
+        background-color: $blanco;
+        border-radius: 15px;
+        width: 200px;    
+        height: 200px;  
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .servicio__icono {
+            transition: transform 0.4s ease;
+        }
+
+        &:hover .servicio__icono {
+            transform: scale(1.1);
+        }
+    }
+}
+}
+
+.container__footer{
+    .container__footer__titulo{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        color: $blanco;
+        text-align: center;
+        padding: 15px;
+        font-size: 10px;
+    }
+}
+
+//Cotiza
+
+.main__cotizador {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.container__cotizador__presentacion {
+    h2 {
+        font-size: 60px;
+        margin-bottom: 10px;
+        color: $blanco;
+    }
+
+    p {
+        font-size: 20px;
+        margin-bottom: 40px;
+        color: $blanco;
+    }
+}
+
+.container__cotizador__monto {
+    background-color: $blanco;
+    color: $color-azul-oscuro;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    padding: 40px;
+    width: 320px;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    label {
+        text-align: left;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    select,
+    input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 14px;
+        width: 100%;
+    }
+
+    #btnCalcular {
+        background-color: $color-primario;
+        color: $blanco;
+        border: none;
+        padding: 12px;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+
+        &:hover {
+        background-color: $color-primario-oscuro;
+        }
+    }
+}
+
+.container__footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    color: $blanco;
+    margin-top: 60px;
+}
