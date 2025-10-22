@@ -156,6 +156,7 @@ a {
 .servicios__container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    margin-top: 20px;
 }
 
 .servicios__container p {
